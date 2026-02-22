@@ -151,18 +151,6 @@ begin
     end process;
   end generate;
     
-    --s1 <= pad(P00, 70, 0);
-    --s2 <= pad(P01, 53, 1) & "00000000000000000";
-    --s3 <= pad(P10, 53, 1) & "00000000000000000";
-    --s4 <= pad(P11, 36, 1) & "0000000000000000000000000000000000";
-
-    --process (CLK) begin
-    --    if rising_edge(CLK) then
-    --        S14 <= s1 + s4;
-    --        S32 <= s3 + s2;
-    --    end if;
-    --end process;
-    
     gen_else : if (small_a or small_b) generate
         S14 <= s1 + s4;
         S32 <= s3 + s2;
